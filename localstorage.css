@@ -1,0 +1,100 @@
+/* Reset/Globals/Helper classes */
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+.no-css {
+	display: none;
+}
+
+
+/* Typography */
+
+html {
+	font-size: 100%;
+}
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #222;
+}
+
+time {}
+
+/* Layout */
+
+header {
+	margin-bottom: 1em;
+	padding-top: 1em;
+	text-align: center;
+}
+
+header time {
+	padding-bottom: 1em;
+}
+
+.schedule-items-frame {
+	width: 92%;
+	margin: 0 auto;
+}
+
+.schedule-item-frame {
+	/* border: 1px solid red; */
+	display: flex;
+}
+
+.schedule-item-frame time {
+	min-width: 7ch;
+	padding: 0.25em 0.5em 0 0;
+	text-align: right;
+	color: #999;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+}
+
+.schedule-item-text {
+	/* border: 1px solid green; */
+	flex-grow: 1;
+	padding: 0.5em;
+	font-size: 85%;
+	border: 1px solid #ccc;
+	background-color: rgb(145, 131, 131);
+}
+
+/*over write the default background color based on the time.
+THE ORDER OF THESE MATTERS!  THEY MUST FOLLOW THE ABOVE RULE.*/
+
+.time-cur {
+	background-color: rgb(236, 130, 130);
+}
+
+.time-fut {
+	background-color: rgb(127, 184, 127);
+}
+
+
+.schedule-item-text[contenteditable="true"] {
+	border-width: 2px;
+	border-color: rgb(236, 130, 130);
+	background-color: rgb(145, 131, 131);
+}
+
+.schedule-item-frame button {
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	min-width: 6ch;
+	padding: 1em;
+	background-color: hsl(240, 34%, 66%);
+	background-color: rgb(145, 131, 131);
+	padding: 1em;
+}
+
+button {
+	background-color: rgb(142, 142, 223) !important;
+}
+footer {
+	margin-top: 1em;
+	text-align: center;
+}
